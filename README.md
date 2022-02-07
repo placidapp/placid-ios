@@ -17,7 +17,7 @@ To integrate the Placid SDK into your Xcode project using [Swift Package Manager
 import PackageDescription
 ...
 dependencies: [
-    .package(url: "https://github.com/placidapp/ios-sdk.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/placidapp/placid-ios.git", .upToNextMajor(from: "0.0.9"))
 ]
 ...
 ```
@@ -38,7 +38,7 @@ pod 'Placid'
 To integrate Placid into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
 
 ```ogdl
-binary "https://raw.githubusercontent.com/placidapp/ios-sdk/master/Placid.json"
+binary "https://raw.githubusercontent.com/placidapp/placid-ios/master/Placid.json"
 ```
 
 ### Manually
