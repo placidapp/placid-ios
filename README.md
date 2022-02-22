@@ -1,12 +1,40 @@
-# Placid iOS SDK
+![Placid.app iOS SDK](https://user-images.githubusercontent.com/4189032/155142345-cf18994f-d66e-46cc-8261-39732b0a53fb.gif)
 
-Generate on-brand social media images automatically with [Placid](https://placid.app).
+<div align="center">
 
-## Requirements
+  <h1>Placid iOS SDK</h1>
+  <strong>Generate custom share images on-device</strong>
+  <br /><br />
+
+<p align="center">
+  <a href="https://cocoapods.org/pods/placid"><img src="https://img.shields.io/cocoapods/v/placid.svg" /></a>
+  <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
+  <a href="https://www.swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-compatible-green" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/iOS-13%2B-lightblue" /></a>
+  <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.3-orange.svg" /></a>
+</p>
+
+</div>
+
+[Placid](https://placid.app) is a toolkit for creative automation. It lets you generate images with dynamic content from custom templates - e.g. for personalized share visuals. The Placid iOS SDK offers native, on-device image generation for your apps.
+
+* Offline, on-device image generation
+* Custom templates for on-brand visuals
+* Drag & drop template editor
+* Dynamic content layers
+* Auto-resizing for text and images
+* Unlimited generated images
+* Dynamic in-app previews
+
+➡️ [Learn more about the Placid Mobile SDK](http://placid.app/solutions/mobile-sdk)
+
+---
+
+## ⚙️ Requirements
 
 - iOS 13.0
 
-## Installation
+## 📦️  Installation
 
 ### Swift Package Manager
 
@@ -32,7 +60,6 @@ To integrate Placid into your Xcode project using [CocoaPods](https://cocoapods.
 pod 'Placid'
 ```
 
-
 ### Carthage
 
 To integrate Placid into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
@@ -45,12 +72,19 @@ binary "https://raw.githubusercontent.com/placidapp/placid-ios/master/Placid.jso
 
 If you prefer to integrate Placid manually instead of using a Dependency Manager, [download the latest Placid.xcframwork](https://github.com/placid/ios-sdk/releases/latest/download/Placid.xcframework.zip) and add it to your project. 
 
-## Usage
+## ✨ Usage
+
+### Setup on placid.app
+
+1. Register on [placid.app](https://placid.app)
+2. Create a project and add the mobile integration
+3. Add a template **OR** download the demo template package to test 🔍️
+4. Add a mobile license in the project settings
+5. Download your custom template package to use with the SDK
 
 ### Configuration
 
-Configure the Placid SDK in your `AppDelegate` by providing the URL to your mobile templates package downloaded from the Placid Webapp.
-
+Configure the Placid SDK in your `AppDelegate` by providing the URL to your mobile templates package downloaded from the Placid web app.
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -67,9 +101,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-### Retrieving Templates
+### Retrieve Templates
 
-Templates can be retrieved via their unique identifier (as found in the placid web app). If the template is not found, this method will return nil.
+Templates can be retrieved via their unique identifier (as found in the [Placid web app](https://placid.app)). If the template is not found, this method will return nil.
 
 ```swift
 let template = PlacidSDK.template(withIdentifier: "template-identifier")
@@ -85,9 +119,9 @@ template.preload()
 
 ### Modify data
 
-Templates can be customized using their specific layers.
+You can modify the content and appearance of dynamic layers in your template.
 
-:warning: The same layer name as in the web-editor has to be used, otherwise the layer will be ignored. 
+:warning: Use the layer names as specified in the template editor, otherwise the layer will be ignored.
 
 #### Text
 
@@ -131,10 +165,10 @@ layer.origin = .zero
 layer.size = CGSize(width: 100, height: 50)
 ```
 
-The mobile SDK supports the same layers and properties as the [API](https://placid.app/docs/2.0/rest/layers). So have a look for the full set of supported functions and properties.
+The mobile SDK supports the same layers and properties as the [Placid REST API](https://placid.app/docs/2.0/rest/layers), so have a look for the full set of supported functions and properties.
 
 ### Render Images
-Once all data is added to the specific template, it can be rendered to a native image.
+Once all data is added to the template, it can be rendered to a native image. Use the rendered image in your `UIImageView`s for dynamic in-app previews or pass it along for social sharing.
 
 ```swift
 template.render(completion: { [weak self] image in
@@ -148,6 +182,6 @@ Or via *async* function:
 let image = await template.render()
 ```
 
-## Support
+## 💬 Support
 
-For bug reports, please create a new Issue right here on Github. Otherwise have a look at our [Help section](https://placid.app/help)
+For bug reports, please create a new Issue right here on Github. Otherwise have a look at our [Help section](https://placid.app/help).
