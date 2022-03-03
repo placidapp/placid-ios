@@ -17,8 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Placid",
-            url: "https://github.com/placidapp/placid-ios/releases/download/0.1.0/Placid.xcframework.zip",
-            checksum: "ba352676f20e11ccd804c5be942916ae6c6435327810542315ff818ab8e688c6"
+            url: "https://github.com/placidapp/placid-ios/releases/download/0.1.1/Placid.xcframework.zip",
+            checksum: "d84be8d34fcdf06d73dcb073ba46244b8d9de498beb7251a3bdb0b515d5ea327"
         )
     ]
 )
