@@ -45,7 +45,7 @@ To integrate the Placid SDK into your Xcode project using [Swift Package Manager
 import PackageDescription
 ...
 dependencies: [
-    .package(url: "https://github.com/placidapp/placid-ios.git", .upToNextMajor(from: "0.0.9"))
+    .package(url: "https://github.com/placidapp/placid-ios.git", .upToNextMajor(from: "0.1.0"))
 ]
 ...
 ```
@@ -89,12 +89,7 @@ Configure the Placid SDK in your `AppDelegate` by providing the URL to your mobi
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     do {
-	    var debug = false    
-	    #if DEBUG
-	    debug = true
-	    #endif
-        
-        try PlacidSDK.configure(withLicenseKey: "your-placid-license-key", templateURL: Bundle.main.url(forResource: "templates", withExtension: "placid"), debug: false)
+	try PlacidSDK.configure(withLicenseKey: "your-placid-license-key", templateURL: Bundle.main.url(forResource: "templates", withExtension: "placid"))
     } catch {
         print(error.localizedDescription)
     }
