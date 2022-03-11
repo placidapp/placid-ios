@@ -163,10 +163,10 @@ layer.size = CGSize(width: 100, height: 50)
 The mobile SDK supports the same layers and properties as the [Placid REST API](https://placid.app/docs/2.0/rest/layers), so have a look for the full set of supported functions and properties.
 
 ### Render Images
-Once all data is added to the template, it can be rendered to a native image. Use the rendered image in your `UIImageView`s for dynamic in-app previews or pass it along for social sharing.
+Once all data is added to the template, it can be rendered to a native image. Use the rendered image in your `UIImageView` or `Image` for dynamic in-app previews or pass it along for social sharing.
 
 ```swift
-template.render(completion: { [weak self] image in
+template.renderImage(completion: { [weak self] image in
 	// use the image here
 })
 ```
@@ -174,7 +174,7 @@ template.render(completion: { [weak self] image in
 Or via *async* function:
 
 ```swift
-let image = await template.render()
+let image = await template.renderImage()
 ```
 
 ## 💬 Support

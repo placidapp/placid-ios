@@ -1,3 +1,7 @@
+## [1.0.0] - 2022-03-11
+### Changed
+- Rename render() method to renderImage()
+
 ## [0.1.1] - 2022-02-03
 ### Fixed
 - Fixed a bug that prevented the use of special characters in a TextLayer
