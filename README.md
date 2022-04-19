@@ -130,8 +130,8 @@ textLayer.textColor = UIColor.red
 
 ```swift
 let image = UIImage(named: "avatar")!
-let imageLayer = template.imageLayer(named: "img-title")
-imageLayer.image = image
+let pictureLayer = template.pictureLayer(named: "avatar")
+pictureLayer.image = image
 ```
 
 #### Rectangles
