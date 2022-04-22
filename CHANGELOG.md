@@ -1,3 +1,8 @@
+## [1.0.1] - 2022-04-22
+### Fixed
+- Fix issue that *debug* flag is not always used
+- Change snapshot method
+
 ## [1.0.0] - 2022-03-11
 ### Changed
 - Rename render() method to renderImage()
