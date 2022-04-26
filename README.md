@@ -45,7 +45,7 @@ To integrate the Placid SDK into your Xcode project using [Swift Package Manager
 import PackageDescription
 ...
 dependencies: [
-    .package(url: "https://github.com/placidapp/placid-ios.git", .upToNextMajor(from: "0.1.0"))
+    .package(url: "https://github.com/placidapp/placid-ios.git", .upToNextMajor(from: "1.0.1"))
 ]
 ...
 ```
